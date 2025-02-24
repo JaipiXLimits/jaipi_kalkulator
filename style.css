@@ -27,8 +27,8 @@ body {
 
 /* Gaya untuk animasi Lottie */
 #logo-animation {
-    width: 180px; /* Ukuran default untuk desktop */
-    height: 80px; /* Ukuran default untuk desktop */
+    width: 180px; /* Ukuran default untuk mobile */
+    height: 80px; /* Ukuran default untuk mobile */
     margin: 0 auto;
 }
 
@@ -110,7 +110,7 @@ button:hover {
     color: #f67c14;
 }
 
-/* Media Queries untuk Responsive Design (Mobile) */
+/* Media Queries untuk Responsive Design */
 @media (max-width: 600px) {
     /* Gaya untuk layar mobile */
     .calculator {
@@ -136,5 +136,14 @@ button:hover {
     .website-title {
         font-size: 6vw; /* Ukuran judul lebih besar untuk mobile */
         padding: 8px 16px; /* Padding lebih kecil untuk mobile */
+    }
+}
+
+/* Media Queries untuk Desktop */
+@media (min-width: 601px) {
+    /* Gaya untuk layar desktop */
+    #logo-animation {
+        width: 300px; /* Lebar animasi diperbesar untuk desktop */
+        height: 150px; /* Tinggi animasi diperbesar untuk desktop */
     }
 }
