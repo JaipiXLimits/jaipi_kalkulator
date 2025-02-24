@@ -22,7 +22,12 @@ function handleButtonClick(buttonText) {
     } else if (buttonText === '=' || buttonText === 'Enter') {
         try {
             // Ganti simbol × dan ÷ kembali ke * dan / sebelum evaluasi
-            const expression = input.replace(/×/g, '*').replace(/÷/g, '/');
+            let expression = input.replace(/×/g, '*').replace(/÷/g, '/');
+            
+            // Tangani persentase, ubah persen menjadi operasi * (angka/100)
+            expression = expression.replace(/(\d+)%/g, '($1/100)'); // Misalnya 50% menjadi 50/100
+            
+            // Evaluasi ekspresi
             const result = eval(expression);
             inputBox.value = result;
             input = result.toString();
@@ -75,5 +80,9 @@ document.addEventListener('keydown', (event) => {
     // Handle Escape (untuk AC)
     else if (key === 'Escape') {
         handleButtonClick('AC');
+    }
+    // Handle persentase (misalnya 20% akan diubah menjadi 20/100)
+    else if (key === '%') {
+        handleButtonClick('%');
     }
 });
