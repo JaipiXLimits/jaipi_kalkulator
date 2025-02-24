@@ -8,7 +8,7 @@ lottie.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'https://jaipixlimits.github.io/jaipi_kalkulator/Animation4.json' // Ganti dengan path file JSON Anda
+    path: '/Animation4.json' // Ganti dengan path file JSON Anda
 });
 
 // Fungsi untuk menangani input dari tombol kalkulator

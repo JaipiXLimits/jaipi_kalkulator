@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Pastikan ini ada -->
+    <meta charset="UTF-8">
     <title>BREATH CALCULATOR</title>
     <link rel="stylesheet" href="style.css">
     <!-- Load Poppins font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Load Lottie library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
 </head>
 <body>
-     <!-- Container untuk animasi dan judul -->
-     <div class="animation-container">
-        <div id="logo-animation"></div>
-        <h1 class="website-title">Kalkulator Website</h1>
-    </div>
+    <!-- Animasi Lottie -->
+    <div id="logo-animation"></div>
+    <h1 class="website-title">Kalkulator Website</h1>
     <br>
+    <!-- Kalkulator -->
     <div class="calculator">
         <input type="text" placeholder="0" id="inputBox" readonly>
-        <div classs="button-container">
+        <div class="button-container">
             <div class="button-row">
                 <button class="operator operator-ac">AC</button>
                 <button class="operator operator-del">DEL</button>
@@ -50,6 +50,17 @@
             </div>
         </div>
     </div>
+    <!-- Load Lottie Animation -->
+    <script>
+        lottie.loadAnimation({
+            container: document.getElementById('logo-animation'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'Animation4.json' // Ganti dengan path file JSON Anda
+        });
+    </script>
+    <!-- Script JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
