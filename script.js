@@ -8,7 +8,7 @@ lottie.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/Animation4.json' // Ganti dengan path file JSON Anda
+    path: '/Animation.json' // Ganti dengan path file JSON Anda
 });
 
 // Fungsi untuk menangani input dari tombol kalkulator
